@@ -9,11 +9,11 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class TransferPage {
 
-    private SelenideElement inputAmount = $("[data-test-id=amount] input");
-    private SelenideElement inputFrom = $("[data-test-id=from] input");
-    private SelenideElement submitButton = $("[data-test-id=action-transfer]");
-    private SelenideElement errorNotification = $("[data-test-id=error-notification]");
-    private SelenideElement actionCancel = $("[data-test-id=action-cancel]");
+    private final SelenideElement inputAmount = $("[data-test-id=amount] input");
+    private final SelenideElement inputFrom = $("[data-test-id=from] input");
+    private final SelenideElement submitButton = $("[data-test-id=action-transfer]");
+    private final SelenideElement errorNotification = $("[data-test-id=error-notification]");
+    private final SelenideElement actionCancel = $("[data-test-id=action-cancel]");
 
     public TransferPage() {
         $("h1").shouldBe(visible).shouldHave(text("Пополнение карты"));

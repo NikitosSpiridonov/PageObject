@@ -7,8 +7,8 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
 public class VerificationPage {
-    private SelenideElement inputCode = $("[data-test-id=code] input");
-    private SelenideElement submitButton = $("[data-test-id=action-verify]");
+    private final SelenideElement inputCode = $("[data-test-id=code] input");
+    private final SelenideElement submitButton = $("[data-test-id=action-verify]");
 
     public VerificationPage() {
         inputCode.shouldBe(visible);

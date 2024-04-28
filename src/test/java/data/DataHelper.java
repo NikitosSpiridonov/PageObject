@@ -6,43 +6,12 @@ public class DataHelper {
     private DataHelper() {
     }
 
-    @Value
-    public static class AuthInfo {
-        String login;
-        String password;
-
-        public AuthInfo(String login, String password) {
-            this.login = login;
-            this.password = password;
-        }
-    }
-
     public static AuthInfo getAuthInfo() {
         return new AuthInfo("vasya", "qwerty123");
     }
 
-    @Value
-    public static class VerificationCode {
-        String code;
-
-        public VerificationCode(String code) {
-            this.code = code;
-        }
-    }
-
     public static VerificationCode getVerificationCodeFor() {
         return new VerificationCode("12345");
-    }
-
-    @Value
-    public static class Card {
-        String id;
-        String number;
-
-        public Card(String id, String number) {
-            this.id = id;
-            this.number = number;
-        }
     }
 
     public static Card getCardInfo1() {
@@ -51,5 +20,22 @@ public class DataHelper {
 
     public static Card getCardInfo2() {
         return new Card("0f3f5c2a-249e-4c3d-8287-09f7a039391d", "5559 0000 0000 0002");
+    }
+
+    @Value
+    public static class AuthInfo {
+        String login;
+        String password;
+    }
+
+    @Value
+    public static class VerificationCode {
+        String code;
+    }
+
+    @Value
+    public static class Card {
+        String id;
+        String number;
     }
 }

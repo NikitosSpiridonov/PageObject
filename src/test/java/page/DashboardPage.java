@@ -4,19 +4,19 @@ import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import data.DataHelper;
 
-import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Condition.attribute;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
 public class DashboardPage {
 
-    private SelenideElement dashboard = $("[data-test-id=dashboard]");
-    private ElementsCollection cardsElements = $$(".list__item div");
-    private SelenideElement actionReload = $("[data-test-id=action-reload]");
-
     private final String cardAttribute = "data-test-id";
     private final String balanceStart = "баланс: ";
     private final String balanceFinish = " р.";
+    private final SelenideElement dashboard = $("[data-test-id=dashboard]");
+    private final ElementsCollection cardsElements = $$(".list__item div");
+    private final SelenideElement actionReload = $("[data-test-id=action-reload]");
 
     public DashboardPage() {
         dashboard.shouldBe(visible);

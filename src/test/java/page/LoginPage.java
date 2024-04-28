@@ -8,9 +8,9 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class LoginPage {
 
-    private SelenideElement inputName = $("[data-test-id=login] input");
-    private SelenideElement inputPassword = $("[data-test-id=password] input");
-    private SelenideElement submitButton = $("[data-test-id=action-login]");
+    private final SelenideElement inputName = $("[data-test-id=login] input");
+    private final SelenideElement inputPassword = $("[data-test-id=password] input");
+    private final SelenideElement submitButton = $("[data-test-id=action-login]");
 
     public VerificationPage validLogin(DataHelper.AuthInfo info) {
         inputName.shouldBe(visible);
